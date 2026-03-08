@@ -77,6 +77,65 @@ contact_form:
             "Veterans' Affairs": Veterans
             Welfare: Welfare
             Other: Other
+        - name: state
+          selector: "#field_0E17A2A5-90F2-490E-9F1C-0B940EF4F4B2"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AA: AA
+            AE: AE
+            AK: AK
+            AL: AL
+            AP: AP
+            AR: AR
+            AZ: AZ
+            CA: CA
+            CO: CO
+            CT: CT
+            DC: DC
+            DE: DE
+            FL: FL
+            GA: GA
+            HI: HI
+            IA: IA
+            ID: ID
+            IL: IL
+            IN: IN
+            KS: KS
+            KY: KY
+            LA: LA
+            MA: MA
+            MD: MD
+            ME: ME
+            MI: MI
+            MN: MN
+            MO: MO
+            MS: MS
+            MT: MT
+            NC: NC
+            ND: ND
+            NE: NE
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NV: NV
+            NY: NY
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VA: VA
+            VT: VT
+            WA: WA
+            WI: WI
+            WV: WV
+            WY: WY
     - javascript:
         - value: document.querySelector("#field_BFF13EA3-37AD-467A-BB61-750F5CCE59E8").value = document.querySelector("#field_BFF13EA3-37AD-467A-BB61-750F5CCE59E8").value.replace(/"/g, '');
     - click_on:

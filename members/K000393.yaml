@@ -96,8 +96,71 @@ contact_form:
             Transportation: Transportation
             Women's Issues: Women's Issues
             OTHER: OTHER
+        - name: state
+          selector: "#field_DD1ADABB-3BA8-4126-B163-B9F8426FA7D2"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AA: AA
+            AE: AE
+            AK: AK
+            AL: AL
+            AP: AP
+            AR: AR
+            AZ: AZ
+            CA: CA
+            CO: CO
+            CT: CT
+            DC: DC
+            DE: DE
+            FL: FL
+            GA: GA
+            HI: HI
+            IA: IA
+            ID: ID
+            IL: IL
+            IN: IN
+            KS: KS
+            KY: KY
+            LA: LA
+            MA: MA
+            MD: MD
+            ME: ME
+            MI: MI
+            MN: MN
+            MO: MO
+            MS: MS
+            MT: MT
+            NC: NC
+            ND: ND
+            NE: NE
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NV: NV
+            NY: NY
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VA: VA
+            VT: VT
+            WA: WA
+            WI: WI
+            WV: WV
+            WY: WY
     - javascript:
         - value: document.querySelector("#field_51E3C368-B801-4DE3-87C7-BA4F503FD791").value = document.querySelector("#field_51E3C368-B801-4DE3-87C7-BA4F503FD791").value.replace(/"/g, '');
+    - check:
+        - name: field_58FEAB43-D1B3-4DE5-AF98-7369BEEA1106
+          selector: "#field_58FEAB43-D1B3-4DE5-AF98-7369BEEA1106_0"
+          value: "N"
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";        
     - recaptcha:

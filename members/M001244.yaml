@@ -56,6 +56,10 @@ contact_form:
                 selector: "#input_2_13"
                 value: $PHONE_PARENTHESES
                 required: false
+              - name: phone
+                selector: "#input_2_13"
+                value: $PHONE
+                required: true
         - select:
               - name: input_3
                 selector: "#input_2_3"

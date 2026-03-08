@@ -99,6 +99,65 @@ contact_form:
             Trade: TRD
             Veterans Affairs: VET
             Water Issues: WATER
+        - name: state
+          selector: "#field_89D288EC-F8E3-419B-8AA7-493368004AC3"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AA: AA
+            AE: AE
+            AK: AK
+            AL: AL
+            AP: AP
+            AR: AR
+            AZ: AZ
+            CA: CA
+            CO: CO
+            CT: CT
+            DC: DC
+            DE: DE
+            FL: FL
+            GA: GA
+            HI: HI
+            IA: IA
+            ID: ID
+            IL: IL
+            IN: IN
+            KS: KS
+            KY: KY
+            LA: LA
+            MA: MA
+            MD: MD
+            ME: ME
+            MI: MI
+            MN: MN
+            MO: MO
+            MS: MS
+            MT: MT
+            NC: NC
+            ND: ND
+            NE: NE
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NV: NV
+            NY: NY
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VA: VA
+            VT: VT
+            WA: WA
+            WI: WI
+            WV: WV
+            WY: WY
     - javascript:
         - value: document.querySelector("#field_BE592D9D-202D-4F5B-94A1-EA9989C9AAED").value = document.querySelector("#field_BE592D9D-202D-4F5B-94A1-EA9989C9AAED").value.replace(/"/g, '');
         # this form only allow numbers in phone number

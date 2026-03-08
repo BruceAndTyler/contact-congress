@@ -1,167 +1,55 @@
 bioguide: A000382
 contact_form:
-  method: post
-  action: ""
-  steps:
-    - visit: "https://www.alsobrooks.senate.gov/share-your-opinion/"
-    - wait:
-        - value: 3
-    - fill_in:
-        - name: form_fields[field_1d46919]
-          selector: "#input_2_2"
-          value: $NAME_FIRST
-          required: true
-        - name: form_fields[field_bdcaff9]
-          selector: "#input_2_3"
-          value: $NAME_LAST
-          required: true
-        - name: form_fields[field_00c2cf4]
-          selector: "#input_2_6_1"
-          value: $ADDRESS_STREET
-          required: true
-        - name: form_fields[field_5ce9e4e]
-          selector: "#input_2_6_3"
-          value: $ADDRESS_CITY
-          required: true
-        - name: form_fields[field_1037219]
-          selector: "#input_2_6_5"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: form_fields[email]
-          selector: "#input_2_42"
-          value: $EMAIL
-          required: true
-        - name: form_fields[field_65932fe]
-          selector: "#input_2_11"
-          value: $SUBJECT
-          required: true
-        - name: form_fields[field_01539f0]
-          selector: "#input_2_12"
-          value: $MESSAGE
-          required: true
-    - select:
-        - name: form_fields[message]
-          selector: "#input_2_17"
-          value: $TOPIC
-          required: true
-          options:
-            Agriculture: AGR
-            Animals: AN
-            "Arts and Humanities": ART
-            Banking: BANK
-            "Budget and Economy": BUD
-            "Campaign Finance Reform": CFR
-            "Help with a Federal Agency": CASEWORK
-            "Child Tax Credit": CTC
-            "Civil Rights/Humanities": CIVIL
-            "Civil Service/Postal": CIVILSERV
-            Congress: CONG
-            "Defense and Military": DEF
-            Economy: ECON
-            Education: EDU
-            "Education Higher": ED.HIGH
-            Elections: ELECT
-            Energy: ENE
-            Environmental: ENV
-            "Family/Marriage": FAM
-            "Federal Employees": FED
-            "Flag Request": FLAG
-            "Food Safety": FOOD
-            "Foreign Relations": FR
-            "Governmental Reform": GOV
-            Grants: GRANTS
-            Guns: GUN
-            Health: HEA
-            "Homeland Security": HOM
-            Housing: HUD
-            Immigration: IMM
-            Infrastructure: INFRA
-            "International Relations": INT
-            "Internship Request": INTERNSHIP
-            Judiciary: JUD
-            Labor: LABOR
-            LGBT: LGBT
-            Life: LIFE
-            Other: OTHER
-            "Passport Casework": PASSPORTS
-            Postal: POST
-            "Science and Technology": SCI
-            "Senior Citizens": SENIORS
-            "Small Business": SM.BUS
-            "Social Issues": SOC
-            "Social Security": SSEC
-            "Taxes/IRS": TAX
-            Telecommunications: TELE
-            "Tour Request": TOURS
-            Trade: TRADE
-            Transportation: TRA
-            Veterans: VET
-            Welfare: WEL
-            "Women's Issues": WOMEN
-        - name: form_fields[field_dd4016c]
-          selector: "#input_2_6_4"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-          options:
-            Alabama: AL
-            Alaska: AK
-            Arizona: AZ
-            Arkansas: AR
-            California: CA
-            Colorado: CO
-            Connecticut: CT
-            Delaware: DE
-            "Washington DC": DC
-            Florida: FL
-            Georgia: GA
-            Hawaii: HI
-            Idaho: ID
-            Illinois: IL
-            Indiana: IN
-            Iowa: IA
-            Kansas: KS
-            Kentucky: KY
-            Louisiana: LA
-            Maine: ME
-            Maryland: MD
-            Massachusetts: MA
-            Michigan: MI
-            Minnesota: MN
-            Mississippi: MS
-            Missouri: MO
-            Montana: MT
-            Nebraska: NE
-            Nevada: NV
-            "New Hampshire": NH
-            "New Jersey": NJ
-            "New Mexico": NM
-            "New York": NY
-            "North Carolina": NC
-            "North Dakota": ND
-            Ohio: OH
-            Oklahoma: OK
-            Oregon: OR
-            Pennsylvania: PA
-            "Rhode Island": RI
-            "South Carolina": SC
-            "South Dakota": SD
-            Tennessee: TN
-            Texas: TX
-            Utah: UT
-            Vermont: VT
-            Virginia: VA
-            Washington: WA
-            "West Virginia": WV
-            Wisconsin: WI
-            Wyoming: WY
-    - javascript:
-        - value: document.querySelector("#form-field-field_01539f0").value = document.querySelector("#form-field-field_01539f0").value.replace(/"/g, '');
-    - click_on:
-        - selector: "#gform_submit_button_2"
-    - wait:
-        - value: 3
-  success:
-    headers:
-      status: 200
-    body:
-      contains: ""
+    steps:
+        - visit: "https://www.alsobrooks.senate.gov/share-your-opinion/"
+        - wait:
+            - value: 3
+        - fill_in:
+            - name: firstName
+              selector: "#input_2_2"
+              value: $NAME_FIRST
+              required: true
+            - name: lastName
+              selector: "#input_2_3"
+              value: $NAME_LAST
+              required: true
+            - name: address
+              selector: "#input_2_6_1"
+              value: $ADDRESS_STREET
+              required: true
+            - name: city
+              selector: "#input_2_6_3"
+              value: $ADDRESS_CITY
+              required: true
+            - name: zip
+              selector: "#input_2_6_5"
+              value: $ADDRESS_ZIP5
+              required: true
+            - name: email
+              selector: "#input_2_42"
+              value: $EMAIL
+              required: true
+            - name: phone
+              selector: "#input_2_41"
+              value: $PHONE
+            - name: subject
+              selector: "#input_2_11"
+              value: $SUBJECT
+              required: true
+            - name: message
+              selector: "#input_2_12"
+              value: $MESSAGE
+              required: true
+        - select:
+            - name: topic
+              selector: "#input_2_17"
+              value: $TOPIC
+              required: true
+            - name: state
+              selector: "#input_2_6_4"
+              value: $ADDRESS_STATE_POSTAL_ABBREV
+              required: true
+        - javascript:
+            - value: "document.querySelector('#input_2_12').value = document.querySelector('#input_2_12').value.replace(/\"/g, '');"
+        - click_on:
+            - selector: "#gform_submit_button_2"

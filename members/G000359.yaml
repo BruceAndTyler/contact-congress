@@ -94,6 +94,65 @@ contact_form:
         options:
           "Yes, I would like a written response": "Yes"
           "No, I am just passing my comments along.": "No"
+      - name: state
+        selector: "#field_A9CC7974-3A7D-4637-8F61-B19D19CF5FCF"
+        value: $ADDRESS_STATE_POSTAL_ABBREV
+        required: true
+        options:
+          AA: AA
+          AE: AE
+          AK: AK
+          AL: AL
+          AP: AP
+          AR: AR
+          AZ: AZ
+          CA: CA
+          CO: CO
+          CT: CT
+          DC: DC
+          DE: DE
+          FL: FL
+          GA: GA
+          HI: HI
+          IA: IA
+          ID: ID
+          IL: IL
+          IN: IN
+          KS: KS
+          KY: KY
+          LA: LA
+          MA: MA
+          MD: MD
+          ME: ME
+          MI: MI
+          MN: MN
+          MO: MO
+          MS: MS
+          MT: MT
+          NC: NC
+          ND: ND
+          NE: NE
+          NH: NH
+          NJ: NJ
+          NM: NM
+          NV: NV
+          NY: NY
+          OH: OH
+          OK: OK
+          OR: OR
+          PA: PA
+          RI: RI
+          SC: SC
+          SD: SD
+          TN: TN
+          TX: TX
+          UT: UT
+          VA: VA
+          VT: VT
+          WA: WA
+          WI: WI
+          WV: WV
+          WY: WY
     - javascript:
       - value: document.querySelector("#field_F1684590-B63E-4986-8A57-1216FEFE8B9F").value = document.querySelector("#field_F1684590-B63E-4986-8A57-1216FEFE8B9F").value.replace(/"/g, '');
     - click_on:

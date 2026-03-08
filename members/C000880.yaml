@@ -50,6 +50,62 @@ contact_form:
         value: "$MESSAGE"
         required: Yes
     - select:
+      - name: state
+        selector: "#input-7811ECC3-4040-F985-52CD-78395AB8ADBB"
+        value: $ADDRESS_STATE_POSTAL_ABBREV
+        required: true
+        options:
+          AL: AL
+          AK: AK
+          AR: AR
+          AZ: AZ
+          CA: CA
+          CO: CO
+          CT: CT
+          DC: DC
+          DE: DE
+          FL: FL
+          GA: GA
+          HI: HI
+          ID: ID
+          IL: IL
+          IN: IN
+          IA: IA
+          KS: KS
+          KY: KY
+          LA: LA
+          ME: ME
+          MD: MD
+          MA: MA
+          MI: MI
+          MN: MN
+          MS: MS
+          MO: MO
+          MT: MT
+          NE: NE
+          NV: NV
+          NH: NH
+          NJ: NJ
+          NM: NM
+          NY: NY
+          NC: NC
+          ND: ND
+          OH: OH
+          OK: OK
+          OR: OR
+          PA: PA
+          RI: RI
+          SC: SC
+          SD: SD
+          TN: TN
+          TX: TX
+          UT: UT
+          VT: VT
+          VA: VA
+          WA: WA
+          WV: WV
+          WI: WI
+          WY: WY
       - name: prefix
         selector: "#input-781129BE-4040-F985-52CD-9967749C1AD6"
         value: "$NAME_PREFIX"

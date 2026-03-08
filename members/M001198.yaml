@@ -1,118 +1,62 @@
-bioguide:  M001198
+bioguide: M001198
 contact_form:
-  method: post
-  action: "https://www.marshall.senate.gov/contact/contact-form/"
-  steps:
-    - visit: "https://www.marshall.senate.gov/contact/contact-form/"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - fill_in:
-        - name: "input_2"
-          selector: "#input_11_2"
-          value: $NAME_FIRST
-          required: true
-        - name: "input_3"
-          selector: "#input_11_3"
-          value: $NAME_LAST
-          required: true
-        - name: "input_12"
-          selector: "#input_11_12"
-          value: $MESSAGE
-          required: true
-        - name: "input_11"
-          selector: "#input_11_11"
-          value: $SUBJECT
-          required: true
-        - name: "input_6.1"
-          selector: "#input_11_6_1"
-          value: $ADDRESS_STREET
-          required: true
-        - name: "input_6.3"
-          selector: "#input_11_6_3"
-          value: $ADDRESS_CITY
-          required: true
-        - name: "input_6.4"
-          selector: "#input_11_6_4"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-        - name: "input_6.5"
-          selector: "#input_11_6_5"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: "input_9"
-          selector: "#input_11_9"
-          value: $EMAIL
-          required: true
-        - name: "input_9_2"
-          selector: "#input_11_9_2"
-          value: $EMAIL
-          required: true
-        - name: "input_7"
-          selector: "#input_11_7"
-          value: $PHONE
-          required: true
-    - select:
-        - name: "input_1"
-          selector: "#input_11_1"
-          value: $NAME_PREFIX
-          required: true
-          options:
-            - Mr.
-            - Mrs.
-            - Ms.
-        - name: "input_17"
-          selector: "#input_11_17"
-          value: $TOPIC
-          required: true
-          options:
-            - Agriculture
-            - American Rights
-            - Animals
-            - Arts & Humanities
-            - Banking & Financial Services
-            - Budget and Economy
-            - Congress and Elections
-            - Defense and Military
-            - Economy
-            - Education
-            - Energy
-            - Environmental
-            - Federal Employees
-            - Foreign Relations
-            - Governmental Reform
-            - Grants
-            - Guns
-            - Health
-            - Homeland Security
-            - Housing and Urban Development
-            - Immigration
-            - International Relations
-            - Judiciary
-            - Labor
-            - Legal Matters
-            - LGBT
-            - Medicare/Medicaid
-            - Other Issues
-            - Post Office
-            - Poverty
-            - Science and Technology
-            - Senior Citizens
-            - Social Issues
-            - Taxes
-            - Trade
-            - Transportation
-            - Veterans
-            - Welfare
-            - Women's Issues
-    - click_on:
-        - name: "input_18"
-          selector: "#choice_11_18_1" 
-    - find:
-        - selector: "#gform_submit_button_11" 
-    - click_on:
-        - selector: "#gform_submit_button_11"   
-  success:
-    headers:
-      status: 200
-    body:
-      contains: Thank you for contacting the office of U.S. Senator Roger Marshall
+    steps:
+        - visit: "https://www.marshall.senate.gov/contact/contact-form/"
+        - find:
+            - selector: "#input_11_2"
+        - fill_in:
+              - name: input_2
+                selector: "#input_11_2"
+                value: $NAME_FIRST
+                required: true
+              - name: input_3
+                selector: "#input_11_3"
+                value: $NAME_LAST
+                required: true
+              - name: input_6_1
+                selector: "#input_11_6_1"
+                value: $ADDRESS_STREET
+                required: true
+              - name: input_6_3
+                selector: "#input_11_6_3"
+                value: $ADDRESS_CITY
+              - name: input_6_4
+                selector: "#input_11_6_4"
+                value: $ADDRESS_STATE_FULL
+              - name: input_6_5
+                selector: "#input_11_6_5"
+                value: $ADDRESS_ZIP5
+              - name: input_7
+                selector: "#input_11_7"
+                value: $PHONE
+              - name: input_9
+                selector: "#input_11_9"
+                value: $EMAIL
+                required: true
+              - name: input_9_2
+                selector: "#input_11_9_2"
+                value: $EMAIL
+                required: true
+              - name: input_11
+                selector: "#input_11_11"
+                value: $SUBJECT
+                required: true
+              - name: input_12
+                selector: "#input_11_12"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: input_1
+                selector: "#input_11_1"
+                value: $NAME_PREFIX
+                required: true
+              - name: input_17
+                selector: "#input_11_17"
+                value: $TOPIC
+                required: true
+        - javascript:
+              - value: "document.querySelector('#choice_11_14_0').click();"
+        - javascript:
+              - value: "document.querySelector('#choice_11_18_1').click();"
+        - click_on:
+              - selector: "#gform_submit_button_11"

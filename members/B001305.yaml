@@ -163,6 +163,10 @@ contact_form:
             Wyoming: 61_WY
     - javascript:
         - value: document.querySelector("#qi_4").value = document.querySelector("#qi_4").value.replace(/"/g, '');
+    - check:
+        - name: qi_5
+          selector: "#qi_5"
+          value: "Y"
     - recaptcha:
         - value: true
     - click_on:

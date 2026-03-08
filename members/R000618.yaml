@@ -50,6 +50,10 @@ contact_form:
           selector: "#input_1_8"
           value: $MESSAGE
           required: true
+        - name: phone
+          selector: "#input_1_4"
+          value: $PHONE
+          required: true
     - select:
         - name: input_3.4
           selector: "#input_1_3_4"

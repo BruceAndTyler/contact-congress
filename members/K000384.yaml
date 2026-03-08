@@ -1,146 +1,69 @@
-bioguide:  K000384
+bioguide: K000384
 contact_form:
-  method: POST
-  action: ""
-  steps:
-    - visit: https://www.kaine.senate.gov/contact/share-your-opinion
-    - find:
-      - selector: "#input-B388AE6D-5056-A066-6018-629F799184D7"
-    - fill_in:
-      - name: first
-        selector: "#input-B388AE6D-5056-A066-6018-629F799184D7"
-        value: $NAME_FIRST
-        required: Yes
-      - name: last
-        selector: "#input-B388B2AD-5056-A066-6058-0338F62B5B7D"
-        value: $NAME_LAST
-        required: Yes
-      - name: addr1
-        selector: "#input-B388AC96-5056-A066-60C0-339424510C66"
-        value: $ADDRESS_STREET
-        required: Yes
-      - name: city
-        selector: "#input-B388AFFC-5056-A066-60C0-4C8084FE94C6"
-        value: $ADDRESS_CITY
-        required: Yes
-      - name: zip
-        selector: "#input-B388B27E-5056-A066-6051-28AF70687AB9"
-        value: $ADDRESS_ZIP5
-        required: Yes
-      - name: phone
-        selector: "#input-B388ADC5-5056-A066-60D0-9122B0D07413"
-        value: $PHONE
-        required: Yes
-      - name: email
-        selector: "#email"
-        value: $EMAIL
-        required: Yes
-      - name: subject
-        selector: "#input-B388AA60-5056-A066-602C-2DADE3D8A6F7"
-        value: $SUBJECT
-        required: Yes
-      - name: message
-        selector: "#input-B388B084-5056-A066-6090-BF0C2E9BE07B"
-        value: $MESSAGE
-        required: Yes
-    - select:
-      - name: input_B388AD1E-5056-A066-6041-2A83C6ADF5C8
-        selector: "#prefixtoggle"
-        value: $NAME_PREFIX
-        required: Yes
-        options:
-          - "Mr."
-          - "Ms."
-          - "Mrs."
-          - "Mx."
-          - "Miss"
-          - "Mr. and Mrs."
-          - "Dr."
-      - name: topic
-        selector: "#input-B388ADF0-5056-A066-6033-31CCE02BC3DA"
-        value: $TOPIC
-        required: Yes
-        options:
-          --- Please Select an Option ---: ""
-          Abortion: Abortion
-          Agriculture: Agriculture
-          Animal Welfare: Animal Welfare
-          Arts & Humanities: Arts & Humanities
-          Banking & Financial Reform: Banking & Financial Reform
-          Budget: Budget
-          Business: Business
-          Campaign Finance Reform: Campaign Finance Reform
-          Child Welfare: Child Welfare
-          Civil Rights: Civil Rights
-          Congress & Executive Office Reform: Congress & Executive Office Reform
-          Crime & Law Enforcement: Crime & Law Enforcement
-          Cybersecurity: Cybersecurity
-          DC Statehood: D.C. Statehood
-          Disaster Relief: Disaster Relief
-          Domestic Violence/Sexual Assault: Domestic Violence/Sexual Assault
-          Economy: Economy
-          Education: Education
-          Election Issues: Election Issues
-          Emergency Management: Emergency Management
-          Energy: Energy
-          Environment & Wildlife Protection: Environment & Wildlife Protection
-          Federal Employees: Federal Employees
-          Foreign Aid: Foreign Aid
-          Foreign Relations: Foreign Relations
-          Foreign Trade: Foreign Trade
-          Gun Violence: Gun Violence
-          Health Care & Affordable Care Act: Health Care & Affordable Care Act
-          Homeland Security: Homeland Security
-          Housing: Housing
-          Immigration: Immigration
-          Intellectual Property: Intellectual Property
-          Intelligence: Intelligence
-          Judicial Issues & Nominations: Judicial Issues & Nominations
-          Medicare: Medicare
-          Mental Health: Mental Health
-          Military/Armed Services/Defense: Military/Armed Services/Defense
-          Native American Issues: Native American Issues
-          Postal Issues: Postal Issues
-          Reporter/Media Inquiry: Reporter/Media Inquiry
-          Public Lands & Natural Resources: Public Lands & Natural Resources
-          Public Welfare: Public Welfare
-          Rules & Ethics: Rules & Ethics
-          Science & Technology: Science & Technology
-          Second Amendment Rights: Second Amendment Rights
-          Small Business: Small Business
-          Social Security: Social Security
-          Space: Space
-          Supreme Court: Supreme Court Vacancy
-          Taxes: Taxes
-          Telecommunications & Internet: Telecommunications & Internet
-          Transportation & Infrastructure: Transportation & Infrastructure
-          Veterans: Veterans
-          Womens Issues: Womens Issues
-          Workforce & Labor: Workforce & Labor
-      - name: response
-        selector: "#input-B388B02A-5056-A066-602B-852F0E0961D4"
-        value: "Yes"
-        required: Yes
-      - name: newsletter
-        selector: "#newslettertoggle"
-        value: "Yes"
-        required: Yes
-    - javascript:
-        - value: "document.querySelector('#issues-form-select-list-0').checked = true;"
-    - javascript:
-        - value: document.querySelector("#input-B388B084-5056-A066-6090-BF0C2E9BE07B").value = document.querySelector("#input-B388B084-5056-A066-6090-BF0C2E9BE07B").value.replace(/"/g, '');
-    - wait:
-      - value: 2
-    - click_on:
-      - value: Submit
-        selector: ".controls button[type='submit']"
-    - wait:
-      - value: 2
-    - find:
-      - selector: "h2"
-        value: "Thank You"
-  success:
-    headers:
-      status: 200
-    body:
-      contains: Thanks for taking the time to share your thoughts with me.
+    steps:
+        - visit: "https://www.kaine.senate.gov/contact/share-your-opinion"
+        - find:
+            - selector: "#input-C37493FA-32C9-4AC5-8741-DBB15B656231"
+        - fill_in:
+              - name: firstName
+                selector: "#input-C37493FA-32C9-4AC5-8741-DBB15B656231"
+                value: $NAME_FIRST
+                required: true
+              - name: lastName
+                selector: "#input-FA29AA7F-6264-43AD-93A0-A9C8E4137B5C"
+                value: $NAME_LAST
+                required: true
+              - name: address
+                selector: "#input-0EAD335B-9386-4CE4-BEEC-4EB7A25154B0"
+                value: $ADDRESS_STREET
+                required: true
+              - name: city
+                selector: "#input-FDAA72A6-BACD-478E-B29C-71F3517BEC76"
+                value: $ADDRESS_CITY
+                required: true
+              - name: zip
+                selector: "#input-7C66D390-A85C-4BB2-B6D4-D4B2A84642BB"
+                value: $ADDRESS_ZIP5
+                required: true
+              - name: email
+                selector: "#email"
+                value: $EMAIL
+                required: true
+              - name: phone
+                selector: "#input-74E0EC54-C170-4BCB-96AC-0A9CDECF046D"
+                value: $PHONE
+              - name: subject
+                selector: "#input-6113487C-5FF6-4D9E-BE80-52D0AF0F5877"
+                value: $SUBJECT
+                required: true
+              - name: message
+                selector: "#input-B11EA673-0986-41A8-96BF-81980A38B3F6"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: prefix
+                selector: "#prefixtoggle"
+                value: $NAME_PREFIX
+                required: true
+              - name: state
+                selector: "#input-7924F194-C509-4A20-AABE-20E48C6841D9"
+                value: $ADDRESS_STATE_POSTAL_ABBREV
+                required: true
+              - name: topic
+                selector: "#input-7B718140-BE58-48FA-AB5C-74CC385B8D07"
+                value: $TOPIC
+                required: true
+              - name: response
+                selector: "#input-569786FF-5652-42DE-A5EE-A7FBD312BC39"
+                value: Y
+                required: true
+                options:
+                    Y: "Yes"
+                    N: "No"
+              - name: newsletter
+                selector: "#newslettertoggle"
+                value: EMAIL.OPTOUT
+                required: true
+                options:
+                    EMAIL.OPTIN: "Yes"
+                    EMAIL.OPTOUT: "No"

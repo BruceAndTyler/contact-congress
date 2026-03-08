@@ -7,7 +7,7 @@ contact_form:
     - wait:
         - value: 2
     - javascript:
-        - value: Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });
+        - value: Array.prototype.forEach.call(document.querySelectorAll('style,[rel="stylesheet"],[type="text/css"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });
     - javascript:
         - value: "document.querySelector('#elementor-tab-content-1151').removeAttribute('hidden');"
     - javascript:
@@ -60,39 +60,14 @@ contact_form:
           selector: "#input_2_39"
           value: $NAME_PREFIX
           required: true
-          options:
-            - Mr.
-            - Mrs.
-            - Ms.
-            - Miss
-            - Professor
-            - Dean
-            - Dr.
+        - name: "input_6.4"
+          selector: "#input_2_6_4"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
         - name: "input_17"
           selector: "#input_2_17"
           value: $TOPIC
           required: true
-          options:
-             Agriculture: Agriculture
-             Budget: Budget
-             Children: Children
-             Election Reform: Election Reform
-             Energy/Environment: Energy/Environment
-             Finance: Finance
-             Health: Health
-             Housing: Housing
-             Immigration: Immigration
-             Judiciary: Judiciary
-             Labor: Labor
-             Defense: Defense
-             Native Americans: Native Americans
-             Public Safety: Public Safety
-             Retirement: Retirement
-             Taxes: Taxes
-             Technology: Technology
-             Trade: Trade
-             Transportation: Transportation
-             Veterans: Veterans
     - javascript:
         - value: document.querySelector('#gform_2 .gform-footer input#gform_submit_button_2').click();
     - wait:

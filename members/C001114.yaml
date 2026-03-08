@@ -41,6 +41,10 @@ contact_form:
           selector: "#form-field-field_01539f0"
           value: $MESSAGE
           required: true
+        - name: phone
+          selector: "#form-field-field_9411e2b"
+          value: $PHONE
+          required: true
   - select:
       - name: form_fields[message]
         selector: "#form-field-message"

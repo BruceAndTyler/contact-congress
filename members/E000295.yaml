@@ -46,6 +46,62 @@ contact_form:
           options:
             max_length: 5000
     - select:
+        - name: state
+          selector: "#input-5C181D14-B9F4-E721-1765-478CC4EE5CD8"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AL: AL
+            AK: AK
+            AR: AR
+            AZ: AZ
+            CA: CA
+            CO: CO
+            CT: CT
+            DC: DC
+            DE: DE
+            FL: FL
+            GA: GA
+            HI: HI
+            ID: ID
+            IL: IL
+            IN: IN
+            IA: IA
+            KS: KS
+            KY: KY
+            LA: LA
+            ME: ME
+            MD: MD
+            MA: MA
+            MI: MI
+            MN: MN
+            MS: MS
+            MO: MO
+            MT: MT
+            NE: NE
+            NV: NV
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NY: NY
+            NC: NC
+            ND: ND
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VT: VT
+            VA: VA
+            WA: WA
+            WV: WV
+            WI: WI
+            WY: WY
         - name: input_80BA1E51-B62F-9243-0C13-D1C74536A208
           selector: "#title"
           value: $NAME_PREFIX

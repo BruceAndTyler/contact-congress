@@ -1,4 +1,4 @@
-bioguide:  D000622
+bioguide: D000622
 contact_form:
   method: post
   action: /content/contact-senator
@@ -6,8 +6,11 @@ contact_form:
     - visit: "https://www.duckworth.senate.gov/connect/email-tammy"
     - click_on:
         - selector: ".opinion a"
+    - wait:
+        - value: 3
     - find:
         - selector: "#input-EC0FF52F-A150-E664-CED9-88E2666AB07A"
+          timeout: 10
     - fill_in:
         - name: "input-EC0FF52F-A150-E664-CED9-88E2666AB07A"
           selector: "#input-EC0FF52F-A150-E664-CED9-88E2666AB07A"
@@ -182,8 +185,6 @@ contact_form:
         - value: document.querySelector("input.btn").click();
     - wait:
         - value: 3
-    - javascript:
-        - value: document.querySelector("#feedbackform").removeClass("hide")
     - find:
         - selector: "h2"
           value: "Thank you for contacting my office."

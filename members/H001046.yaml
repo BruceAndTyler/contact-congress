@@ -1,201 +1,65 @@
 bioguide: H001046
 contact_form:
-  method: post
-  action: /contact/write-martin
-  steps:
-    - visit: "https://www.heinrich.senate.gov/contact/write-martin/form"
-    - fill_in:
-        - name: input_9431418E-B223-0CE4-6D0C-52FCB0AE06F1
-          selector: "#firstName"
-          value: $NAME_FIRST
-          required: true
-        - name: input_9431439D-CF7D-9E6A-5A05-0D4027E54362
-          selector: "#input-9431439D-CF7D-9E6A-5A05-0D4027E54362"
-          value: $NAME_LAST
-          required: true
-        - name: input_943144B4-9C79-D3A3-F395-4027A8790606
-          selector: "#input-943144B4-9C79-D3A3-F395-4027A8790606"
-          value: $ADDRESS_STREET
-          required: true
-        - name: input_94314474-BB3F-59BC-D196-62728121608F
-          selector: "#input-94314474-BB3F-59BC-D196-62728121608F"
-          value: $ADDRESS_CITY
-          required: true
-        - name: input_9431425B-B665-DFD1-15E9-3DF3E0F50A84
-          selector: "#input-9431425B-B665-DFD1-15E9-3DF3E0F50A84"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: input_943142CB-C40B-15E5-39EA-4B8746F7EB35
-          selector: "#input-943142CB-C40B-15E5-39EA-4B8746F7EB35"
-          value: $PHONE
-          required: true
-        - name: input_9431416F-C681-1702-A705-70DA22B6E7D9
-          selector: "#email"
-          value: $EMAIL
-          required: true
-        - name: input_94314152-96CD-417F-4522-DB707C8D39C5
-          selector: "#input-94314152-96CD-417F-4522-DB707C8D39C5"
-          value: $EMAIL
-          required: true
-        - name: input_94314307-E032-83ED-C95A-2BD2205AC96D
-          selector: "#input-94314307-E032-83ED-C95A-2BD2205AC96D"
-          value: $SUBJECT
-          required: true
-        - name: input_94314202-EBEE-43E1-1340-43D2F5A1CC39
-          selector: "#input-94314202-EBEE-43E1-1340-43D2F5A1CC39"
-          value: $MESSAGE
-          required: true
-    - select:
-        - name: input_94314276-9978-1228-35FB-6399F8C82B53
-          selector: "#input-94314276-9978-1228-35FB-6399F8C82B53"
-          value: $NAME_PREFIX
-          required: true
-          options:
-            "Mr.": "Mr."
-            "Ms.": "Ms."
-            "Mrs.": "Mrs."
-            "Mx.": "Mx."
-            "Dr.": "Dr."
-            "Mr. and Mrs.": "Mr. and Mrs."
-            "Dr. and Mrs.": "Dr. and Mrs."
-            "Dr. and Mr.": "Dr. and Mr."
-            "Dr. and Dr.": "Dr. and Dr."
-            "Mr. and Mr.": "Mr. and Mr."
-            "Ms. and Ms.": "Ms. and Ms."
-            "Admiral": "Admiral"
-            "Airman": "Airman"
-            "Airman First Class": "Airman First Class"
-            "Brigadier General": "Brigadier General"
-            "Captain": "Captain"
-            "Chief Master Sergeant": "Chief Master Sergeant"
-            "Chief Master Sergeant of the Air Force": "Chief Master Sergeant of the Air Force"
-            "Chief Petty Officer": "Chief Petty Officer"
-            "Chief Warrant Officer": "Chief Warrant Officer"
-            "Command Chief Master Sergeant": "Command Chief Master Sergeant"
-            "Colonel": "Colonel"
-            "Commander": "Commander"
-            "Corporal": "Corporal"
-            "Ensign": "Ensign"
-            "Father": "Father"
-            "First Lieutenant": "First Lieutenant"
-            "First Sergeant": "First Sergeant"
-            "Fleet Admiral": "Fleet Admiral"
-            "General": "General"
-            "General of the Air Force": "General of the Air Force"
-            "Governor": "Governor"
-            "Gunnery Sergeant": "Gunnery Sergeant"
-            "Hon.": "Hon."
-            "Imam": "Imam"
-            "Lance Corporal": "Lance Corporal"
-            "Lieutenant": "Lieutenant"
-            "Lieutenant Colonel": "Lieutenant Colonel"
-            "Lieutenant Commander": "Lieutenant Commander"
-            "Lieutenant General": "Lieutenant General"
-            "Lieutenant, Junior Grade": "Lieutenant, Junior Grade"
-            "Major": "Major"
-            "Major General": "Major General"
-            "Master Chief Petty Officer": "Master Chief Petty Officer"
-            "Master Chief Petty Officer of the Navy": "Master Chief Petty Officer of the Navy"
-            "Master Gunnery Sgt": "Master Gunnery Sgt"
-            "Master Sergeant": "Master Sergeant"
-            "Pastor": "Pastor"
-            "Petty Officer First Class": "Petty Officer First Class"
-            "Petty Officer Second Class": "Petty Officer Second Class"
-            "Petty Officer Third Class": "Petty Officer Third Class"
-            "Private": "Private"
-            "Private First Class": "Private First Class"
-            "Rabbi": "Rabbi"
-            "Rear Admiral (lower half)": "Rear Admiral (lower half)"
-            "Rear Admiral (upper half)": "Rear Admiral (upper half)"
-            "Representative": "Representative"
-            "Reverend": "Reverend"
-            "Seaman": "Seaman"
-            "Seaman Apprentice": "Seaman Apprentice"
-            "Seaman Recruit": "Seaman Recruit"
-            "Second Lieutenant": "Second Lieutenant"
-            "Senator": "Senator"
-            "Senior Airman": "Senior Airman"
-            "Senior Chief Petty Officer": "Senior Chief Petty Officer"
-            "Senior Master Sergeant": "Senior Master Sergeant"
-            "Sergeant": "Sergeant"
-            "Sergeant Major": "Sergeant Major"
-            "Sgt Major Of The Corps": "Sgt Major Of The Corps"
-            "Sister": "Sister"
-            "Staff Sergeant": "Staff Sergeant"
-            "Technical Sergeant": "Technical Sergeant"
-            "Vice Admiral": "Vice Admiral"
-            "Warrant Officer": "Warrant Officer"
-        - name: input_97446EF1-DF46-47BC-AA04-8E7C072C8BC1
-          selector: "#topic"
-          value: $TOPIC
-          required: true
-          options:
-            "Academy Nominations": "ACAD"
-            "Agriculture/Food Safety": "AGR"
-            "Animal Welfare": "AN"
-            "Banking & Financial Services": "BANK"
-            "Budget": "BUD"
-            "Campaign Finance Reform/Elections": "ELECT"
-            "Children/Family/Nutrition": "CHILD"
-            "Civil Liberties": "CIVIL"
-            "Climate Change": "CLIMATE"
-            "Commerce": "COMM"
-            "E-Newsletter Sign Up": "ENEWS SUBSCRIBE"
-            "Economy & Jobs": "ECON"
-            "Education": "EDU"
-            "Energy": "ENE"
-            "Environment": "ENV"
-            "Federal Grant Funding": "GRANTS"
-            "Flag Requests": "FLAG"
-            "Foreign Affairs": "FA"
-            "Gun Violence": "GUN"
-            "Health Care & Wellness": "HEA"
-            "Help with a Federal Agency": "CASEWORK"
-            "Homeland Security": "HOM"
-            "Housing": "HOUSE"
-            "Immigration": "IMM"
-            "Indian Country": "INDIAN"
-            "Judiciary": "JUD"
-            "Labor/Pensions": "LAB"
-            "LGBTQ": "LGBTQ"
-            "Military & Defense": "DEF"
-            "National Labs": "NATLABS"
-            "Postal": "POST"
-            "Schedule a Meeting": "MEET"
-            "Public Lands/Forestry": "LANDS"
-            "Reproductive Rights": "REPRODUCTIVE"
-            "Second Amendment": "SECONDAMEND"
-            "Seniors' Issues": "SENIORS"
-            "Small Business": "BUS"
-            "Space/NASA/Science/Technology": "SCI"
-            "Taxes": "TAX"
-            "Telecommunications": "TEL"
-            "Trade": "TRADE"
-            "Transportation & Infrastructure": "TRA"
-            "Veterans": "VET"
-            "Visiting DC": "VISITDC"
-            "Welfare/Food Assistance": "WEL"
-            "Wildlife": "WILD"
-            "Women's Issues": "WOMEN"
-    - check:
-        - name: input_94314363-FB36-D5A3-6F70-827D9DE7DBDF
-          selector: "#input-94314363-FB36-D5A3-6F70-827D9DE7DBDF"
-          value: "94314119-CA32-DB5B-2A98-DCC3D083B1AC"
-          required: true
-        - name: input_94313F55-A993-415F-FCE7-E6C2BE6C486C
-          selector: "#newsletteractiontoggle-1"
-          value: "94314419-0D17-BC0F-3FF1-481ABC8F93A5"
-          required: true
-        - name: input_943144D2-A0C6-4A5A-E904-EF7F9C2EC4B0
-          selector: "#input-94314135-C91C-F610-24E4-9509F3018AFB"
-          value: "94314135-C91C-F610-24E4-9509F3018AFB"
-          required: false
-    - click_on:
-        - selector: ".controls button[type='submit']"
-    - wait:
-        - value: 3
-  success:
-    headers:
-      status: 200
-    body:
-      contains: Thank you for reaching out to Senator
+    steps:
+        - visit: "https://www.heinrich.senate.gov/contact/write-martin/form"
+        - find:
+            - selector: "#firstName"
+        - fill_in:
+              - name: firstName
+                selector: "#firstName"
+                value: $NAME_FIRST
+                required: true
+              - name: lastName
+                selector: "#input-9431439D-CF7D-9E6A-5A05-0D4027E54362"
+                value: $NAME_LAST
+                required: true
+              - name: address
+                selector: "#input-943144B4-9C79-D3A3-F395-4027A8790606"
+                value: $ADDRESS_STREET
+                required: true
+              - name: city
+                selector: "#input-94314474-BB3F-59BC-D196-62728121608F"
+                value: $ADDRESS_CITY
+                required: true
+              - name: zip
+                selector: "#input-9431425B-B665-DFD1-15E9-3DF3E0F50A84"
+                value: $ADDRESS_ZIP5
+                required: true
+              - name: email
+                selector: "#email"
+                value: $EMAIL
+                required: true
+              - name: verifyEmail
+                selector: "#input-94314152-96CD-417F-4522-DB707C8D39C5"
+                value: $EMAIL
+                required: true
+              - name: phone
+                selector: "#input-943142CB-C40B-15E5-39EA-4B8746F7EB35"
+                value: $PHONE
+              - name: subject
+                selector: "#input-94314307-E032-83ED-C95A-2BD2205AC96D"
+                value: $SUBJECT
+                required: true
+              - name: message
+                selector: "#input-94314202-EBEE-43E1-1340-43D2F5A1CC39"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: prefix
+                selector: "#input-94314276-9978-1228-35FB-6399F8C82B53"
+                value: $NAME_PREFIX
+                required: true
+              - name: state
+                selector: "#input-943141E4-9170-8622-49BC-7EEF5DF587F1"
+                value: $ADDRESS_STATE_POSTAL_ABBREV
+                required: true
+              - name: topic
+                selector: "#topic"
+                value: $TOPIC
+                required: true
+        - javascript:
+              - value: "document.querySelector('#input-94314119-CA32-DB5B-2A98-DCC3D083B1AC').click();"
+        - javascript:
+              - value: "document.querySelector('#newsletteractiontoggle-1').click();"
+        - javascript:
+              - value: "document.querySelector('#input-94314135-C91C-F610-24E4-9509F3018AFB').click();"

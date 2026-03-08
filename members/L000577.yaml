@@ -82,7 +82,69 @@ contact_form:
             Transportation: TRA
             Veterans: VET
             Other: OTHER
+        - name: state
+          selector: "#field_39552071-6781-469B-9C76-B0C6D660DFBF"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AA: AA
+            AE: AE
+            AK: AK
+            AL: AL
+            AP: AP
+            AR: AR
+            AZ: AZ
+            CA: CA
+            CO: CO
+            CT: CT
+            DC: DC
+            DE: DE
+            FL: FL
+            GA: GA
+            HI: HI
+            IA: IA
+            ID: ID
+            IL: IL
+            IN: IN
+            KS: KS
+            KY: KY
+            LA: LA
+            MA: MA
+            MD: MD
+            ME: ME
+            MI: MI
+            MN: MN
+            MO: MO
+            MS: MS
+            MT: MT
+            NC: NC
+            ND: ND
+            NE: NE
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NV: NV
+            NY: NY
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VA: VA
+            VT: VT
+            WA: WA
+            WI: WI
+            WV: WV
+            WY: WY
     - check:
+        - name: field_4F8F64B7-527E-4060-84F0-20EA869B3E66
+          selector: "#field_4F8F64B7-527E-4060-84F0-20EA869B3E66_0"
+          value: "Y"
         - name: field_D42B86D9-04F0-4F57-AC0C-614B7B86E8AB
           selector: "#field_D42B86D9-04F0-4F57-AC0C-614B7B86E8AB_0"
           value: "N"

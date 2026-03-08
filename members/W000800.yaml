@@ -1,174 +1,55 @@
 bioguide: W000800
 contact_form:
-  method: post
-  action: ""
-  steps:
-    - visit: "https://www.welch.senate.gov/email-peter/"
-    - fill_in:
-        - name: input_21
-          selector: "#input_4_21"
-          value: $NAME_PREFIX
-          required: true
-        - name: input_19
-          selector: "#input_4_19"
-          value: $NAME_FIRST
-          required: true
-        - name: input_20
-          selector: "#input_4_20"
-          value: $NAME_LAST
-          required: true
-        - name: input_22
-          selector: "#input_4_22"
-          value: $ADDRESS_STREET
-          required: true
-        - name: input_23
-          selector: "#input_4_23"
-          value: $ADDRESS_STREET_2
-          required: false
-        - name: input_5
-          selector: "#input_4_5"
-          value: $ADDRESS_CITY
-          required: true
-        - name: input_7
-          selector: "#input_4_7"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: input_8
-          selector: "#input_4_8"
-          value: $PHONE
-          required: true
-        - name: input_9
-          selector: "#input_4_9"
-          value: $EMAIL
-          required: true
-        - name: input_32
-          selector: "#input_4_32"
-          value: $SUBJECT
-          required: true
-        - name: input_31
-          selector: "#input_4_31"
-          value: $MESSAGE
-          required: true
-    - select:
-        - name: input_6
-          selector: "#input_4_6"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-          options:
-            Alabama: AL
-            Alaska: AK
-            Arizona: AZ
-            Arkansas: AR
-            California: CA
-            Colorado: CO
-            Connecticut: CT
-            Delaware: DE
-            District of Columbia: DC
-            Florida: FL
-            Georgia: GA
-            Hawaii: HI
-            Idaho: ID
-            Illinois: IL
-            Indiana: IN
-            Iowa: IA
-            Kansas: KS
-            Kentucky: KY
-            Louisiana: LA
-            Maine: ME
-            Maryland: MD
-            Massachusetts: MA
-            Michigan: MI
-            Minnesota: MN
-            Mississippi: MS
-            Missouri: MO
-            Montana: MT
-            Nebraska: NE
-            Nevada: NV
-            New Hampshire: NH
-            New Jersey: NJ
-            New Mexico: NM
-            New York: NY
-            North Carolina: NC
-            North Dakota: ND
-            Ohio: OH
-            Oklahoma: OK
-            Oregon: OR
-            Pennsylvania: PA
-            Rhode Island: RI
-            South Carolina: SC
-            South Dakota: SD
-            Tennessee: TN
-            Texas: TX
-            Utah: UT
-            Vermont: VT
-            Virginia: VA
-            Washington: WA
-            West Virginia: WV
-            Wisconsin: WI
-            Wyoming: WY
-        - name: input_25
-          selector: "#input_4_25"
-          value: $TOPIC
-          required: true
-          options:
-            Agriculture: Agriculture
-            Animal Welfare: Animal Welfare
-            Antitrust and Competition: Antitrust and Competition
-            Arts and Humanities: Arts and Humanities
-            Appropriations: Appropriations
-            Banking and Finance: Banking and Finance
-            Budget and Economy: Budget and Economy
-            Civil Rights: Civil Rights
-            Commerce: Commerce
-            Congress and Elections: Congress and Elections
-            Consumer Protection: Consumer Protection
-            Defense and Military: Defense and Military
-            Democracy Reform (Elections, Lobbying, Voting): Democracy Reform (Elections, Lobbying, Voting)
-            Economic Development: Economic Development
-            Education: Education
-            Energy: Energy
-            Environment, Natural Resources, and Climate Change: Environment, Natural Resources, and Climate Change
-            Family: Family
-            Federal Employees: Federal Employees
-            Food Safety: Food Safety
-            Foreign Relations: Foreign Relations
-            Government Reform: Government Reform
-            Guns: Guns
-            Health and Healthcare: Health and Healthcare
-            Homeland Security: Homeland Security
-            Housing: Housing
-            Immigration: Immigration
-            Infrastructure: Infrastructure
-            Internal Revenue Services (IRS): Internal Revenue Services (IRS)
-            Jobs and the Economy: Jobs and the Economy
-            Judicial Branch/Courts: Judicial Branch/Courts
-            Judiciary (Criminal Justice System, Law Enforcement, Domestic Violence): Judiciary (Criminal Justice System, Law Enforcement, Domestic Violence)
-            Labor and Unions: Labor and Unions
-            LGBTQIA+: LGBTQIA+
-            Military: Military
-            Native American/Indigenous Peoples: Native American/Indigenous Peoples
-            Postal Service: Postal Service
-            Science, Space, and Oceans: Science, Space, and Oceans
-            Security: Security
-            Seniors: Seniors
-            Small Business: Small Business
-            Social Issues: Social Issues
-            Social Services: Social Services
-            Social Security and Related Programs: Social Security and Related Programs
-            Taxes: Taxes
-            Technology and Privacy: Technology and Privacy
-            Telecommunications and Broadband: Telecommunications and Broadband
-            Territories and DC: Territories and DC
-            Transportation: Transportation
-            Trade: Trade
-            Veterans: Veterans
-            Women's Issues: Women's Issues
-    - javascript:
-        - value: document.querySelector("#input_4_31").value = document.querySelector("#input_4_31").value.replace(/"/g, '');
-    - click_on:
-        - selector: "#gform_submit_button_4"
-  success:
-    headers:
-      status: 200
-    body:
-      contains: ""
+    steps:
+        - visit: "https://www.welch.senate.gov/email-peter/"
+        - fill_in:
+              - name: input_19
+                selector: "#input_4_19"
+                value: $NAME_FIRST
+                required: true
+              - name: input_20
+                selector: "#input_4_20"
+                value: $NAME_LAST
+                required: true
+              - name: input_22
+                selector: "#input_4_22"
+                value: $ADDRESS_STREET
+                required: true
+              - name: input_5
+                selector: "#input_4_5"
+                value: $ADDRESS_CITY
+                required: true
+              - name: input_7
+                selector: "#input_4_7"
+                value: $ADDRESS_ZIP5
+                required: true
+              - name: input_9
+                selector: "#input_4_9"
+                value: $EMAIL
+                required: true
+              - name: input_8
+                selector: "#input_4_8"
+                value: $PHONE
+                required: true
+              - name: input_32
+                selector: "#input_4_32"
+                value: $SUBJECT
+                required: true
+              - name: input_31
+                selector: "#input_4_31"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: input_21
+                selector: "#input_4_21"
+                value: $NAME_PREFIX
+              - name: input_6
+                selector: "#input_4_6"
+                value: $ADDRESS_STATE_POSTAL_ABBREV
+                required: true
+              - name: input_25
+                selector: "#input_4_25"
+                value: $TOPIC
+                required: true
+        - click_on:
+              - selector: "#gform_submit_button_4"
