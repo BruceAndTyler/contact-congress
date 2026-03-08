@@ -141,13 +141,28 @@ contact_form:
             WI: WI
             WV: WV
             WY: WY
-    - check:
-        - name: field_4F8F64B7-527E-4060-84F0-20EA869B3E66
-          selector: "#field_4F8F64B7-527E-4060-84F0-20EA869B3E66_0"
-          value: "Y"
-        - name: field_D42B86D9-04F0-4F57-AC0C-614B7B86E8AB
-          selector: "#field_D42B86D9-04F0-4F57-AC0C-614B7B86E8AB_0"
-          value: "N"
+    - javascript:
+        - value: >
+            (function() {
+              var radios = document.querySelectorAll('input[type="radio"][name*="field_4F8F64B7"], input[type="radio"][name*="field_D42B86D9"]');
+              for (var i = 0; i < radios.length; i++) {
+                var lbl = document.querySelector('label[for="' + radios[i].id + '"]') || radios[i].closest('label') || radios[i].parentElement;
+                var text = lbl ? lbl.textContent.toLowerCase() : '';
+                if (/would like|want.*reply|yes.*reply|reply.*yes/i.test(text)) {
+                  radios[i].click();
+                  return;
+                }
+              }
+              var allRadios = document.querySelectorAll('input[type="radio"]');
+              for (var j = 0; j < allRadios.length; j++) {
+                var lbl2 = document.querySelector('label[for="' + allRadios[j].id + '"]') || allRadios[j].closest('label') || allRadios[j].parentElement;
+                var text2 = lbl2 ? lbl2.textContent.toLowerCase() : '';
+                if (/would like.*reply/i.test(text2)) {
+                  allRadios[j].click();
+                  return;
+                }
+              }
+            })();
     - javascript:
         - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - javascript:

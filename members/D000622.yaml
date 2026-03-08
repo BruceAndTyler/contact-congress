@@ -7,7 +7,7 @@ contact_form:
     - click_on:
         - selector: ".opinion a"
     - wait:
-        - value: 3
+        - value: 5
     - find:
         - selector: "#input-EC0FF52F-A150-E664-CED9-88E2666AB07A"
           timeout: 10

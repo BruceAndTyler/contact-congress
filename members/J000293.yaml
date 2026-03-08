@@ -7,6 +7,10 @@ contact_form:
     - find:
         - selector: '#field_AC036D04-8D06-4D4C-BCAD-4C0D66C7C34E'
     - fill_in:
+        - name: field_252E85F4-2FE5-4D71-8E62-9DF6919D1AB8
+          selector: "#field_252E85F4-2FE5-4D71-8E62-9DF6919D1AB8"
+          value: $NAME_PREFIX
+          required: false
         - name: field_AC036D04-8D06-4D4C-BCAD-4C0D66C7C34E
           selector: "#field_AC036D04-8D06-4D4C-BCAD-4C0D66C7C34E"
           value: $NAME_FIRST
@@ -27,6 +31,10 @@ contact_form:
           selector: "#field_ACF15530-9220-49BE-86F4-5E8D51C49324"
           value: $ADDRESS_ZIP5
           required: true
+        - name: field_BEB949A7-79B1-4A0E-80C2-2275C551866A
+          selector: "#field_BEB949A7-79B1-4A0E-80C2-2275C551866A"
+          value: $PHONE
+          required: false
         - name: field_4A5576FA-7ED1-4AD0-8F54-E50FD425EDEB
           selector: "#field_4A5576FA-7ED1-4AD0-8F54-E50FD425EDEB"
           value: $EMAIL

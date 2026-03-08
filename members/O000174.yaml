@@ -4,10 +4,10 @@ contact_form:
   action: ""
   steps:
     - visit: https://www.ossoff.senate.gov/contact-us/message
-    - javascript: 
-        - value: "document.querySelector('.elementor-element-2b1cb2e2 #share_views_btn').click();"   
+    - click_on:
+        - selector: ".elementor-element-2b1cb2e2 #share_views_btn"
     - wait:
-        - value: 3
+        - value: 5
     - find:
         - selector: "#share_views_form"
     - fill_in:
@@ -168,7 +168,7 @@ contact_form:
         - name: prefix
           selector: "#form-field-field_79b2b37"
           value: $NAME_PREFIX
-          required: true
+          required: false
           options:
             Mr.: Mr.
             Ms.: Ms.
@@ -178,8 +178,8 @@ contact_form:
             Dr.: Dr.
             Father: Father
             Sister: Sister
-    - javascript:
-        - value: document.querySelector('.elementor-element-db7bce0 .e-form__buttons button[type="submit"] .elementor-screen-only').click();
+    - click_on:
+        - selector: ".elementor-element-db7bce0 .e-form__buttons button[type='submit']"
     - wait:
         - value: 10
   success:

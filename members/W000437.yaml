@@ -37,8 +37,119 @@ contact_form:
           selector: "#field_5EF876CF-9476-427B-A01B-25AAFD0E013D"
           value: $MESSAGE
           required: true
-    - javascript:
-        - value: document.querySelector("#field_9CBA10ED-C94F-4770-A165-38166625C0A8").options[8].selected = true
+    - select:
+        - name: prefix
+          selector: "#field_96A937C7-25E8-4B18-8EA7-63A138E06211"
+          value: $NAME_PREFIX
+          required: false
+          options:
+            - Mr.
+            - Mrs.
+            - Ms.
+            - Mr. and Mrs.
+            - Dr.
+            - Dr. and Mr.
+            - Dr. and Mrs.
+            - Reverend
+            - Sister
+        - name: state
+          selector: "#field_49733098-C61F-426D-AE81-30E6B41C6D19"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AA: AA
+            AE: AE
+            AP: AP
+            AL: AL
+            AK: AK
+            AZ: AZ
+            AR: AR
+            CA: CA
+            CO: CO
+            CT: CT
+            DE: DE
+            DC: DC
+            FL: FL
+            GA: GA
+            HI: HI
+            ID: ID
+            IL: IL
+            IN: IN
+            IA: IA
+            KS: KS
+            KY: KY
+            LA: LA
+            ME: ME
+            MD: MD
+            MA: MA
+            MI: MI
+            MN: MN
+            MS: MS
+            MO: MO
+            MT: MT
+            NE: NE
+            NV: NV
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NY: NY
+            NC: NC
+            ND: ND
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VT: VT
+            VA: VA
+            WA: WA
+            WV: WV
+            WI: WI
+            WY: WY
+        - name: topic
+          selector: "#field_9CBA10ED-C94F-4770-A165-38166625C0A8"
+          value: $TOPIC
+          required: true
+          options:
+            Request Help with a Federal Agency: Casework
+            Request Help With Your Passport: PASS
+            Abortion: Abortion
+            Agriculture: Agriculture
+            Armed Services: Armed Services
+            COVID-19: COVID-19
+            Economy and Jobs: Economy and Jobs
+            Education and Schools: Education
+            Energy: Energy
+            Environment/Animal Welfare: Environment/Animal Welfare
+            Federal Budget: Federal Budget
+            FEMA: Fema
+            Financial Services: Financial Services
+            Foreign Affairs: Foreign Affairs
+            Healthcare: Healthcare
+            Homeland Security/Defense: Homeland Security/Defense
+            Housing: Housing
+            Immigration: Immigration
+            Judicial/Crime: Judicial/Crime
+            Labor: L
+            Medical Research: Medical Research
+            Medicare/Medicaid: Medicare/Medicaid
+            Religious Freedoms: Religious Freedoms
+            Second Amendment: Second Amendment
+            Small Business: Small Business
+            Social Security and Pensions: Social Security and Pensions
+            Social Security/Disability Assistance: Social Security/Disability Assistance
+            Taxes: Taxes
+            Telecommunications/Technology: Telecommunications/Technology
+            Trade: Trade
+            U.S. Postal Service: Postal
+            Transportation: Transportation
+            Veterans Affairs: Veterans Affairs
+            Veterans Assistance: Veterans Assistance
     - javascript:
         - value: document.querySelector("#field_5EF876CF-9476-427B-A01B-25AAFD0E013D").value = document.querySelector("#field_5EF876CF-9476-427B-A01B-25AAFD0E013D").value.replace(/"/g, '');
     - javascript:

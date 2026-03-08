@@ -170,8 +170,6 @@ contact_form:
         - selector: "#choice_1_18_0"
     - javascript:
         - value: document.querySelector('#gform_1').insertAdjacentHTML('beforeend', "<textarea name='g-recaptcha-response' id='g-recaptcha-response'></textarea>");
-    - javascript:
-        - value: "document.querySelector('#gform_1').style.backgroundColor = 'blue';"
     - recaptcha:
         - value: true
     - click_on:
