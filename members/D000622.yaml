@@ -4,8 +4,8 @@ contact_form:
   action: /content/contact-senator
   steps:
     - visit: "https://www.duckworth.senate.gov/connect/email-tammy"
-    - click_on:
-        - selector: ".opinion a"
+    - javascript:
+        - value: "document.querySelector('.opinion a').click();"
     - wait:
         - value: 5
     - find:

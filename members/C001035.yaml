@@ -43,9 +43,37 @@ contact_form:
           required: true
           options:
             max_length: 10000
-    - click_on:
-        - selector: label[for='input-DC0A7EF0-5056-A066-600C-CD33536E6D09']
-        - selector: label[for='enewstoggle-1']
+    - javascript:
+        - value: >
+            (function() {
+              var radios = document.querySelectorAll('input[type=radio]');
+              var groups = {};
+              for (var i = 0; i < radios.length; i++) {
+                var n = radios[i].name;
+                if (!groups[n]) groups[n] = [];
+                var lbl = document.querySelector("label[for='" + radios[i].id + "']");
+                groups[n].push({inp: radios[i], label: lbl ? lbl.textContent.trim() : '', lbl: lbl});
+              }
+              var groupNames = Object.keys(groups);
+              if (groupNames.length >= 1) {
+                var respGroup = groups[groupNames[0]];
+                for (var j = 0; j < respGroup.length; j++) {
+                  if (respGroup[j].label.toLowerCase() === 'yes' && respGroup[j].lbl) {
+                    respGroup[j].lbl.click();
+                    break;
+                  }
+                }
+              }
+              if (groupNames.length >= 2) {
+                var newsGroup = groups[groupNames[1]];
+                for (var k = 0; k < newsGroup.length; k++) {
+                  if (newsGroup[k].label.toLowerCase() === 'no' && newsGroup[k].lbl) {
+                    newsGroup[k].lbl.click();
+                    break;
+                  }
+                }
+              }
+            })();
     - select:
         - name: "input_B03E04DB-4040-F985-52CD-18F332336F99"
           selector: "#input-B03E04DB-4040-F985-52CD-18F332336F99"

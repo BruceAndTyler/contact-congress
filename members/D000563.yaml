@@ -292,8 +292,13 @@ contact_form:
             WY: WY
     - javascript:
         - value: document.querySelector("#input-2ED44860-E200-4A7A-91BF-01BEF2FD8E60").value = document.querySelector("#input-2ED44860-E200-4A7A-91BF-01BEF2FD8E60").value.replace(/"/g, '');
+    - javascript:
+        - value: >
+            (function() {
+              var el = document.querySelector('#responsetoggle');
+              if (el && !el.checked) { el.click(); }
+            })();
     - click_on:
-        - selector: "#responsetoggle"
         - value: Send
           selector: "input[type=submit]"
     - find:

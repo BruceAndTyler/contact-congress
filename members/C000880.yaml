@@ -148,10 +148,10 @@ contact_form:
           "Yes": "Yes"
       - name: resident
         selector: "#input-14CFC1B4-F363-3066-5B30-4B5F37B6DBD9"
-        value: "Yes"
+        value: "No"
         required: false
         options:
-          "Yes": "Yes"
+          "No": "No"
       - name: lastcontact
         selector: "#input-6ED1469E-5056-A066-60B9-78C1BD536DDF"
         value: "LCN - Never"

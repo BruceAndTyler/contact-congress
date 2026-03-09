@@ -223,6 +223,26 @@ contact_form:
         West Virginia: West Virginia
         Wisconsin: Wisconsin
         Wyoming: Wyoming
+  - javascript:
+    - value: >
+        (function() {
+          var legends = document.querySelectorAll('legend, .gfield_label, label.gfield_label');
+          for (var i = 0; i < legends.length; i++) {
+            var t = legends[i].textContent.toLowerCase();
+            if (t.indexOf('update') !== -1 || t.indexOf('newsletter') !== -1 || t.indexOf('sign up') !== -1) {
+              var container = legends[i].closest('.gfield');
+              if (container) {
+                var radios = container.querySelectorAll('input[type=radio]');
+                for (var j = 0; j < radios.length; j++) {
+                  var lbl = container.querySelector("label[for='" + radios[j].id + "']");
+                  if (lbl && lbl.textContent.trim().toLowerCase() === 'no') {
+                    radios[j].click(); return;
+                  }
+                }
+              }
+            }
+          }
+        })();
   - click_on:
     - selector: input[type=submit].gform_button
   - wait:

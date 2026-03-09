@@ -49,7 +49,7 @@ contact_form:
           required: true
         - name: "input_7"
           selector: "input[name='input_7']"
-          value: $PHONE
+          value: $PHONE_PARENTHESES
           required: true
     - select:
         - name: "input_17"

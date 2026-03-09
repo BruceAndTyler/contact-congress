@@ -7,6 +7,10 @@ contact_form:
     - javascript:
         - value: document.querySelector('.elementor-location-header').remove()
     - fill_in:
+        - name: "form_fields[prefix]"
+          selector: "#form-field-prefix"
+          value: $NAME_PREFIX
+          required: true
         - name: "form_fields[first_name]"
           selector: "#form-field-first_name"
           value: $NAME_FIRST

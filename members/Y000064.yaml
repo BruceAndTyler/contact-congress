@@ -287,6 +287,23 @@ contact_form:
             West Virginia: West Virginia
             Wisconsin: Wisconsin
             Wyoming: Wyoming
+    - javascript:
+        - value: >
+            (function() {
+              var labels = document.querySelectorAll('label');
+              for (var i = 0; i < labels.length; i++) {
+                var text = labels[i].textContent.toLowerCase();
+                if (text.indexOf('response') !== -1 || text.indexOf('reply') !== -1) {
+                  var forAttr = labels[i].getAttribute('for');
+                  if (forAttr) {
+                    var inp = document.getElementById(forAttr);
+                    if (inp && !inp.checked) { inp.click(); return; }
+                  }
+                  var inp2 = labels[i].querySelector('input');
+                  if (inp2 && !inp2.checked) { inp2.click(); return; }
+                }
+              }
+            })();
     - click_on:
         - selector: "#gform_submit_button_1"
     - wait:
