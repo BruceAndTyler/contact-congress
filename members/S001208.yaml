@@ -29,6 +29,10 @@ contact_form:
           selector: "#qi_1_prefix"
           value: $NAME_PREFIX
           required: false
+        - name: qi_1_hphone
+          selector: "#qi_1_hphone"
+          value: $PHONE
+          required: false
         - name: qi_1_email
           selector: "#qi_1_email"
           value: $EMAIL

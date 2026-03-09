@@ -10,6 +10,8 @@ contact_form:
         - value: "document.querySelector('.elementor-location-header').remove();"
     - javascript:
         - value: "document.querySelector('#gform_wrapper_1').style.display = 'block'"
+    - javascript:
+        - value: "if (typeof jQuery !== 'undefined' && jQuery('#input_1_7').unmask) jQuery('#input_1_7').unmask();"
     - fill_in:
         - name: "input_2"
           selector: "input[name='input_2']"

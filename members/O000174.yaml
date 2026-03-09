@@ -165,11 +165,6 @@ contact_form:
             WI: WI
             WV: WV
             WY: WY
-    - fill_in:
-        - name: prefix
-          selector: "#form-field-field_79b2b37"
-          value: $NAME_PREFIX
-          required: false
     - click_on:
         - selector: ".elementor-element-db7bce0 .e-form__buttons button[type='submit']"
     - wait:
