@@ -31,6 +31,10 @@ contact_form:
           selector: "#field_352A82B8-7386-4C46-96FF-E96E2A164C11"
           value: $EMAIL
           required: true
+        - name: field_1B20E163-EA77-43AD-A84F-87DCE4F1B900
+          selector: "#field_1B20E163-EA77-43AD-A84F-87DCE4F1B900"
+          value: $PHONE
+          required: false
         - name: field_675A9F22-38AE-4EF6-97D8-09FC5F57B19E
           selector: "#field_675A9F22-38AE-4EF6-97D8-09FC5F57B19E"
           value: $SUBJECT

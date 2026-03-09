@@ -66,6 +66,11 @@ contact_form:
           Transportation: TRA
           Veterans: VET
           Women’s Issues: WOMEN
+    - select:
+      - name: input_5C181D14-B9F4-E721-1765-478CC4EE5CD8
+        selector: "#input-5C181D14-B9F4-E721-1765-478CC4EE5CD8"
+        value: $ADDRESS_STATE_POSTAL_ABBREV
+        required: true
     - fill_in:
       - name: input_5C0E54FD-9A0F-A898-ABE9-77C0ED64809E
         selector: "#input-5C0E54FD-9A0F-A898-ABE9-77C0ED64809E"
