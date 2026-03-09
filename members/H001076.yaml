@@ -182,7 +182,7 @@ contact_form:
         - value: >
             (function() {
               var cb = document.querySelector('#response');
-              if (cb) { cb.checked = true; }
+              if (cb) { cb.checked = true; cb.style.width = '24px'; cb.style.height = '24px'; }
               var hid = document.querySelector('#responseval');
               if (hid) { hid.value = 'Yes'; }
             })();
