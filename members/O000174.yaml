@@ -3,13 +3,9 @@ contact_form:
   method: post
   action: ""
   steps:
-    - visit: https://www.ossoff.senate.gov/contact-us/message
-    - click_on:
-        - selector: ".elementor-element-2b1cb2e2 #share_views_btn"
+    - visit: https://www.ossoff.senate.gov/contact-us/share-your-views/
     - wait:
-        - value: 5
-    - find:
-        - selector: "#share_views_form"
+        - value: 3
     - fill_in:
         - name: "form_fields[name]"
           selector: "#form-field-name"
@@ -106,6 +102,17 @@ contact_form:
             - Veterans
             - Voting Rights
             - Website Problem
+        - name: prefix
+          selector: "#form-field-field_2edf713"
+          value: $NAME_PREFIX
+          required: true
+          options:
+            Mr.: Mr.
+            Ms.: Ms.
+            Mrs.: Mrs.
+            Mx.: Mx.
+            Prof.: Prof.
+            Dr.: Dr.
         - name: state
           selector: "#form-field-field_f4b1144"
           value: $ADDRESS_STATE_POSTAL_ABBREV
