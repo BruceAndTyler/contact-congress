@@ -48,7 +48,7 @@ contact_form:
           value: $EMAIL
           required: true
         - name: "input_7"
-          selector: "input[name='input_7']"
+          selector: "#input_1_7"
           value: $PHONE_PARENTHESES
           required: true
     - select:
